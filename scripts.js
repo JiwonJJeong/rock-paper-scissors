@@ -1,5 +1,8 @@
 console.log("Hello World");
 
+let humanScore = 0;
+let computerScore = 0;
+
 // function getComputerChoice will randomly return "rock", "paper", or "scissors" string
 // INIT function getComputerChoice
     // INIT number randomInteger to 0
