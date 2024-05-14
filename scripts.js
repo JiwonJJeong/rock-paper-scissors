@@ -36,5 +36,12 @@ console.log(getComputerChoice());
     // SET humanInput to an all lowercase version of itself
     // RETURN humanInput
 // END function
+function getHumanChoice(){
+    let humanInput = "";
+    humanInput = prompt("Let's play rock, paper, scissors! What's your move?");
+    humanInput.toLowerCase();
+    return humanInput;
+}
 
 // PRINT function once to test getHumanChoice
+console.log(getHumanChoice());
