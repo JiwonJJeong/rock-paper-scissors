@@ -89,33 +89,42 @@ function getHumanChoice(){
 function playRound(humanChoice, computerChoice){
     if (humanChoice === "rock"){
         if (computerChoice === "rock"){
-            return "You tie! We both chose rock.";
+            console.log("You tie! We both chose rock.");
+            return;
         } else if (computerChoice === "paper"){
             computerScore++;
-            return "You lose! Paper beats rock."
+            console.log("You lose! Paper beats rock.");
+            return;
         } else{
             humanScore++;
-            return "You win! Rock beats scissors."
+            console.log("You win! Rock beats scissors.");
+            return;
         }
     } else if (humanChoice === "paper"){
         if (computerChoice === "rock"){
             humanScore++;
-            return "You win! Paper beats rock.";
+            console.log("You win! Paper beats rock.");
+            return;
         } else if (computerChoice === "paper"){
-            return "You tie! We both chose paper."
+            console.log("You tie! We both chose paper.");
+            return;
         } else{
             computerScore++;
-            return "You lose! Scissors beats paper."
+            console.log("You lose! Scissors beats paper.");
+            return;
         }
     } else if (humanChoice === "scissors"){
         if (computerChoice === "rock"){
             computerScore++;
-            return "You lose! Rock beats scissors."
+            console.log("You lose! Rock beats scissors.");
+            return;
         } else if (computerChoice === "paper"){
             humanScore++;
-            return "You win! Scissors beats paper."
+            console.log("You win! Scissors beats paper.");
+            return;
         } else{
-            return "You tie! We both chose scissors.";
+            console.log("You tie! We both chose scissors.");
+            return;
         }
     } else {
         return "You didn't choose 'rock', 'paper', or 'scissors'!"
