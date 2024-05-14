@@ -136,9 +136,7 @@ function playRound(humanChoice, computerChoice){
 // CALL getHumanChoice function and INIT to new constant
 // CALL getComputerChoice function and INIT to new constant
 // CALL playRound using the two constants just initialized
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-playRound(humanSelection,computerSelection);
+
 
 // function playGame will play 5 rounds, then declare a winner based on rounds won
 // INIT function playGame
@@ -154,3 +152,24 @@ playRound(humanSelection,computerSelection);
         // PRINT tie statement with number of wins
     // END IF
 // END function
+function playGame(){
+    humanScore = 0;
+    computerScore = 0;
+    for (let i =0 ; i<5 ; i++) {
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+        playRound(humanSelection,computerSelection);
+    }
+    if (humanScore>computerScore){
+        console.log("You win! You won " + humanScore + " times out of 5.");
+        return;
+    } else if (humanScore<computerScore){
+        console.log("You lose! You won " + humanScore + " times out of 5.");
+        return;
+    } else {
+        console.log("We tied! You won " + humanScore + " times out of 5.");
+        return;
+    }
+}
+
+playGame();
