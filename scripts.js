@@ -27,3 +27,14 @@ function getComputerChoice(){
 // PRINT function twice to test getComputerChoice
 console.log(getComputerChoice());
 console.log(getComputerChoice());
+
+// function getHumanChoice will prompt a string input of "rock", "paper", or "scissors"
+// function will return the string input
+// INIT function getHumanChoice
+    // INIT string humanInput
+    // OBTAIN user input with prompt and SET to humanInput
+    // SET humanInput to an all lowercase version of itself
+    // RETURN humanInput
+// END function
+
+// PRINT function once to test getHumanChoice
