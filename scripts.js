@@ -139,3 +139,18 @@ function playRound(humanChoice, computerChoice){
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 playRound(humanSelection,computerSelection);
+
+// function playGame will play 5 rounds, then declare a winner based on rounds won
+// INIT function playGame
+// INIT score variables (move from global) and constants
+    // FOR 5 times
+        // CALL random computer choice and inputted human choice to constants
+        // CALL play one round
+    // IF human score is larger than computer score THEN
+        // PRINT winner statement with number of wins
+    // ELSE IF human score is smaller than computer score THEN
+        // PRINT loser statement with number of wins
+    // ELSE
+        // PRINT tie statement with number of wins
+    // END IF
+// END function
