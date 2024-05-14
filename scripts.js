@@ -48,3 +48,49 @@ function getHumanChoice(){
 
 // PRINT function once to test getHumanChoice
 console.log(getHumanChoice());
+
+// function playRound will simulate a single round
+// function will take two string inputs for human then computer, then compare them to determine winner.
+// function will then output a message declaring how the round went
+// function increments appropriate score variable based on who won
+// INIT function playRound with parameters for human and computer choice
+    // IF human choice is rock THEN
+        // IF computer choice is rock THEN
+            // RETURN tie statement
+        // ELSE IF computer choice is paper THEN
+            // RETURN you lose statement
+            // INCREMENT computer score
+        // ELSE
+            // RETURN you win statement
+            // INCREMENT human score
+        // END IF
+    // ELSE IF human choice is paper THEN
+        // IF computer choice is rock THEN
+            // RETURN you win statement
+            // INCREMENT human score
+        // ELSE IF computer choice is paper THEN
+            // RETURN tie statement
+        // ELSE
+            // RETURN you lose statement
+            // INCREMENT computer score
+        // END IF
+    // ELSE IF human choice is scissors THEN
+        // IF computer choice is rock THEN
+            // RETURN you lose statement
+            // INCREMENT computer score
+        // ELSE IF computer choice is paper THEN
+            // RETURN you win statement
+            // INCREMENT human score
+        // ELSE
+            // RETURN tie statement
+        // END IF
+    // ELSE
+        // RETURN you didn't choose rock, paper, or scissors statement
+    // END IF
+// END function
+
+
+
+// CALL getHumanChoice function and INIT to new constant
+// CALL getComputerChoice function and INIT to new constant
+// CALL playRound using the two constants just initialized
