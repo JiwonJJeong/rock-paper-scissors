@@ -26,48 +26,42 @@ console.log(getComputerChoice());
 // function will then output a message declaring how the round went
 // function increments appropriate score variable based on who won
 function playRound(humanChoice, computerChoice){
+    const roundResult = document.createElement("p");
+    const resultTable = document.querySelector(".results");
     if (humanChoice === "rock"){
         if (computerChoice === "rock"){
-            console.log("You tie! We both chose rock.");
-            return;
+            roundResult.textContent="You tie! We both chose rock.";
         } else if (computerChoice === "paper"){
             computerScore++;
-            console.log("You lose! Paper beats rock.");
-            return;
+            roundResult.textContent="You lose! Paper beats rock.";
         } else{
             humanScore++;
-            console.log("You win! Rock beats scissors.");
-            return;
+            roundResult.textContent="You win! Rock beats scissors.";
         }
     } else if (humanChoice === "paper"){
         if (computerChoice === "rock"){
             humanScore++;
-            console.log("You win! Paper beats rock.");
-            return;
+            roundResult.textContent="You win! Paper beats rock.";
         } else if (computerChoice === "paper"){
-            console.log("You tie! We both chose paper.");
-            return;
+            roundResult.textContent="You tie! We both chose paper.";
         } else{
             computerScore++;
-            console.log("You lose! Scissors beats paper.");
-            return;
+            roundResult.textContent="You lose! Scissors beats paper.";
         }
     } else if (humanChoice === "scissors"){
         if (computerChoice === "rock"){
             computerScore++;
-            console.log("You lose! Rock beats scissors.");
-            return;
+            roundResult.textContent="You lose! Rock beats scissors.";
         } else if (computerChoice === "paper"){
             humanScore++;
-            console.log("You win! Scissors beats paper.");
-            return;
+            roundResult.textContent="You win! Scissors beats paper.";
         } else{
-            console.log("You tie! We both chose scissors.");
-            return;
+            roundResult.textContent="You tie! We both chose scissors.";
         }
     } else {
-        return "You didn't choose 'rock', 'paper', or 'scissors'!"
+        roundResult.textContent= "You didn't choose 'rock', 'paper', or 'scissors'!";
     }
+    resultTable.appendChild(roundResult);
 }
 
 
