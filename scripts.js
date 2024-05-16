@@ -21,6 +21,8 @@ console.log(getComputerChoice());
 console.log(getComputerChoice());
 
 
+
+
 // function playRound will simulate a single round
 // function will take two string inputs for human then computer, then compare them to determine winner.
 // function will then output a result message by appending new paragraph onto "results" div
@@ -75,9 +77,11 @@ function playRound(humanChoice, computerChoice){
 function checkWinner(){
     if (humanScore >= 5){
         alert("You got 5 points first, so you won!");
+        location.reload();
     }
-    if (computerScore >= 5){
+    else if (computerScore >= 5){
         alert("I got 5 points first, so I won!");
+        location.reload();
     }
 }
 
