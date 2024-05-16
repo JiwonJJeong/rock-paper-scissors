@@ -66,24 +66,18 @@ function playRound(humanChoice, computerChoice){
     resultTable.appendChild(roundResult);
     humanScoreText.textContent = "Your score: " + humanScore;
     computerScoreText.textContent = "My score: " + computerScore;
+    checkWinner();
 }
 
 
 
-// function playGame will play 5 rounds, then declare a winner based on rounds won
-function playGame(){
-    humanScore = 0;
-    computerScore = 0;
-
-    if (humanScore>computerScore){
-        console.log("You win! You won " + humanScore + " times out of 5.");
-        return;
-    } else if (humanScore<computerScore){
-        console.log("You lose! You won " + humanScore + " times out of 5.");
-        return;
-    } else {
-        console.log("We tied! You won " + humanScore + " times out of 5.");
-        return;
+// if either side has 5 score points, declares them winner
+function checkWinner(){
+    if (humanScore >= 5){
+        alert("You got 5 points first, so you won!");
+    }
+    if (computerScore >= 5){
+        alert("I got 5 points first, so I won!");
     }
 }
 
