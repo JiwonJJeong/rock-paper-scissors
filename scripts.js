@@ -91,12 +91,11 @@ function playGame(){
 
 
 // add event listeners to 3 buttons for rock, paper, or scissors choice
-
 const rockButton = document.querySelector(".rock");
 const paperButton = document.querySelector(".paper");
 const scissorsButton = document.querySelector(".scissors");
 
-// event will play a round using r,p,s of button for human choice and generate computer choice
-rockButton.addEventListener("click", playRound("rock", getComputerChoice()));
-paperButton.addEventListener("click", playRound("paper", getComputerChoice()));
-scissorsButton.addEventListener("click", playRound("scissors", getComputerChoice()));
+// event will play a round using button for human choice and generate computer choice
+rockButton.addEventListener("click", function() {playRound("rock", getComputerChoice())});
+paperButton.addEventListener("click", function() {playRound("paper", getComputerChoice())});
+scissorsButton.addEventListener("click", function() {playRound("scissors", getComputerChoice())});
