@@ -20,15 +20,6 @@ function getComputerChoice(){
 console.log(getComputerChoice());
 console.log(getComputerChoice());
 
-// function getHumanChoice will prompt a string input of "rock", "paper", or "scissors"
-// function will return the string input
-function getHumanChoice(){
-    let humanInput = "";
-    humanInput = prompt("Let's play rock, paper, scissors! What's your move?");
-    humanInput.toLowerCase();
-    return humanInput;
-}
-
 
 // function playRound will simulate a single round
 // function will take two string inputs for human then computer, then compare them to determine winner.
@@ -85,11 +76,7 @@ function playRound(humanChoice, computerChoice){
 function playGame(){
     humanScore = 0;
     computerScore = 0;
-    for (let i =0 ; i<5 ; i++) {
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
-        playRound(humanSelection,computerSelection);
-    }
+
     if (humanScore>computerScore){
         console.log("You win! You won " + humanScore + " times out of 5.");
         return;
@@ -102,4 +89,14 @@ function playGame(){
     }
 }
 
-playGame();
+
+// add event listeners to 3 buttons for rock, paper, or scissors choice
+
+const rockButton = document.querySelector(".rock");
+const paperButton = document.querySelector(".paper");
+const scissorsButton = document.querySelector(".scissors");
+
+// event will play a round using r,p,s of button for human choice and generate computer choice
+rockButton.addEventListener("click", playRound("rock", getComputerChoice()));
+paperButton.addEventListener("click", playRound("paper", getComputerChoice()));
+scissorsButton.addEventListener("click", playRound("scissors", getComputerChoice()));
